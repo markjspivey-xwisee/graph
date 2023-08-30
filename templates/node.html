@@ -1,0 +1,8 @@
+
+<div vocab="http://schema.org/" typeof="Node">
+    <span property="id">{{ node.id }}</span>
+    <span property="data">{{ node.data }}</span>
+    {% for edge_id in node.edges %}
+    <a href="/edge/{{ edge_id }}" property="edge" rel="connected">Connected Edge</a>
+    {% endfor %}
+</div>
